@@ -5,6 +5,7 @@ export const Container = styled.View`
     justify-content: space-between;
     align-items: center;
     padding:100px 20px;
+    background-color:#fff;
 `;
 
 export const Title = styled.Text`
@@ -19,18 +20,4 @@ export const ImageHome = styled.Image`
     resizeMode:contain;
 `;
 
-export const ButtonStart = styled.TouchableOpacity`
-    background-color:#2f3640;
-    width:200px;
-    height:60px;
-    border-radius:10px;
 
-    justify-content: center;
-    align-items: center;
-`;
-
-export const ButtonStartText = styled.Text`
-    color:#fff;
-    font-family:'Inter_700Bold';
-    font-size:16px;
-`;

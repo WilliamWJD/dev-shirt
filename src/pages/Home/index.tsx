@@ -1,18 +1,22 @@
 import React from 'react';
-import { Text } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import HomeImage from '../../images/HomeImage.png';
 
-import { Container, ImageHome, Title, ButtonStart, ButtonStartText } from './styles';
+import { Container, ImageHome, Title } from './styles';
+import ButtonNext from '../../components/ButtonNext';
 
 export default function Home(){
+    const { navigate } = useNavigation();
+
     return(
         <Container>
             <Title>DEV-SHIRT</Title>
             <ImageHome source={HomeImage}/>
-            <ButtonStart>
-                <ButtonStartText>Vamos começar</ButtonStartText>
-            </ButtonStart>
+            <ButtonNext
+                ButtonTitle="Vamos começar"
+                onPress={()=>navigate("AccountEnter")}
+            />
         </Container>
     )
 }
